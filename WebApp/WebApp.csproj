@@ -170,6 +170,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\fpc-workshop2-webapp - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\fpc-workshop2-webapp-tkh%28Debug%29.pubxml" />
+    <None Include="Properties\PublishProfiles\fpc-workshop2-webapp-tkh%28Release%29.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
