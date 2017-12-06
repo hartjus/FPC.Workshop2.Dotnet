@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebApp.Models.Upload>
+<h2>Uploads</h2>
+
+<p>@ViewBag.Message</p>
+
+<table class="table">
+    <tr>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Uploaded
+        </th>
+        <th>
+            Payload
+        </th>
+    </tr>
+@foreach (var upload in Model) {
+    <tr>
+        <td>
+            @upload.FirstName
+        </td>
+        <td>
+            @upload.LastName
+        </td>
+        <td>
+            @upload.Uploaded.ToString("MM/dd/yyyy hh:mm:ss tt")
+        </td>
+        <td>
+            @string.Format("{0}...", upload.Payload.Substring(0, 10))
+        </td>
+    </tr>
+}
+</table>
+
+<h2>UploadFile</h2>
+@using (Html.BeginForm("UploadFile", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.TextBox("file", "", new { type = "file" }) <br />
+        <input type="submit" value="Upload" />
+    </div>
+}
+  

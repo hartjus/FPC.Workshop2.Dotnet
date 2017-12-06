@@ -9,6 +9,11 @@ namespace DataAccess
 {
     public class Datastore: DbContext
     {
+        public Datastore(string connectionString) : base(connectionString)
+        {
+            this.Configuration.LazyLoadingEnabled = false;
+        }
+
         public DbSet<User> Users { get; set; }
         public DbSet<Upload> Uploads { get; set; }
     }

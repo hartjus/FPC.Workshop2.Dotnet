@@ -65,8 +65,8 @@
     <Folder Include="StoredProcedures" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\User.sql" />
-    <Build Include="Tables\Upload.sql" />
+    <Build Include="Tables\Users.sql" />
+    <Build Include="Tables\Uploads.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Azure-Database.publish.xml" />

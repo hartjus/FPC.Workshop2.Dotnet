@@ -12,6 +12,8 @@ namespace DataAccess
 
         public int UserId { get; set; }
 
+        public User User { get; set; }
+
         public string Payload { get; set; }
 
         public DateTime Created { get; set; }
